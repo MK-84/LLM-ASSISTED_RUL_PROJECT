@@ -4,8 +4,14 @@
 # Large NASA C-MAPSS data (ignore to avoid bloat)
 data/
 
-# Generated outputs (checkpoints/plots/reports)
+# Ignore outputs folder EXCEPT the evaluation subfolder (plots/reports)
 outputs/
+!outputs/evaluation/  # Keep evaluation folder (plots + reports)
+!outputs/evaluation/**/*  # Keep all files/subfolders inside evaluation/
+
+# Ignore large/checkpoint files 
+outputs/checkpoints/  # Ignore model checkpoints (large!)
+outputs/metrics/      # Ignore raw metrics files (users generate their own)
 
 # Python cache files
 __pycache__/
