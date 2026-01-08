@@ -1,0 +1,46 @@
+LLM-Assisted_RUL_Project/
+│
+├── data/(raw data)
+│   ├── FD001/
+│   ├── FD002/
+│   ├── FD003/
+│   └── FD004/
+│   
+│
+├── src/
+│   ├── config.py
+│   ├──__init__.py
+|   |
+│   ├── data/(We run code using the terminal)
+│   │   ├── data_loading.py
+│   │   ├── datasets.py
+│   │   └── preprocessing.py
+│   |
+│   ├── models/
+│   │   ├── tcn_bilstm_dual_attn.py       ← MAIN MODEL (HI + RUL) -- for our project evaluation
+│   │   └── bilstm_baseline.py            ← BASELINE MODEL 
+│   |
+│   ├── training/(We run code using the terminal)
+│   │   ├── train_hi_rul.py               ← TRAIN ALL FD001–FD004 
+│   │   ├── train_hi_rul.py               ← TRAIN ALL FD001–FD004
+│   │   └── eval_rul.py                   ← EVALUATION MODULE
+│   |
+│   ├── llm/
+│   │   ├── llm_reasoning_ollama.py       ← (DeepSeek-r1)
+│   │   └── prompts.py
+│   |
+│   └── utils/
+│       ├── metrics.py
+│       ├── plots.py                      ← attention + RUL curves
+|       └── docx_report.py
+|                  
+│   
+│
+├── outputs/
+│   ├── checkpoints/
+│   ├── evaluation/
+│   └── preprocessed/
+│                                                
+├── .gitinore
+├── requirements.txt
+└── README.md

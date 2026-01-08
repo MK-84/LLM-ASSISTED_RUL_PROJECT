@@ -1,0 +1,26 @@
+# Python virtual environment (NEVER upload)
+.venv/
+
+# Large NASA C-MAPSS data (ignore to avoid bloat)
+data/
+
+# Generated outputs (checkpoints/plots/reports)
+outputs/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# OS/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ollama cache (if used)
+.ollama/
